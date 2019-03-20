@@ -117,15 +117,6 @@
 //_________Mobile
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-
-  .open {
-    font-size: 22px;
-    font-weight: bold;
-  }
-  .closed {
-    font-size: 22px;
-    font-weight: bold;
-  }
   .footer.content {
     width: 100%;
     height: 100%;
@@ -247,7 +238,7 @@
     border-top: 1px solid @color-footer-gold;
   }
 
-  .title{
+  .resource_title{
     font-size: 14px;
     font-weight: bold;
     padding: 10px;
@@ -336,7 +327,7 @@
   .support_returns::before {
     position: absolute;
   }
-  .title:before {
+  .resource_title:before {
     content: '\25c1';
     position: absolute;
     right: 20px;
@@ -484,7 +475,7 @@
     justify-content: space-between;
     width: 40%;
 
-    & .title {
+    & .resource_title {
       font-size: 16px;
       font-weight: bold;
       padding-bottom: 15px;

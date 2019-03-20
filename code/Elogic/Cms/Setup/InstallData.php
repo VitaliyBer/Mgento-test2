@@ -190,7 +190,7 @@ class InstallData implements InstallDataInterface
                 'content' => "
 <div class='resources_link' id='resources_link'>
 <div class='resources_link-item'>
-<div data-role='collapsible' class='title'>
+<div data-role='collapsible' class='resource_title'>
 <div data-role='trigger'>
                            <span>Partners</span>
                           
@@ -212,7 +212,7 @@ class InstallData implements InstallDataInterface
 </div>
 </div>
  <div class='resources_link-item'>    
-                           <div data-role='collapsible' class='title'>
+                           <div data-role='collapsible' class='resource_title'>
 <div data-role='trigger'>
                            <span>Resources</span>
                            </div>
@@ -242,7 +242,7 @@ class InstallData implements InstallDataInterface
 </div>
 
 <div class='resources_link-item'>
-<div data-role='collapsible' class='title'>
+<div data-role='collapsible' class='resource_title'>
 <div data-role='trigger'>
  
                            <span>Programs</span>
