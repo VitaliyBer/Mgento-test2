@@ -242,6 +242,11 @@
     margin-bottom: 30px;
     border-bottom: 1px solid @color-footer-gold;
   }
+
+  .resources_link-item:not(:first-child){
+    border-top: 1px solid @color-footer-gold;
+  }
+
   .title{
     font-size: 14px;
     font-weight: bold;
@@ -251,9 +256,6 @@
       display: flex;
       justify-content: space-between;
     }
-  }
-  .title:not(:first-child) {
-    border-top: 1px solid @color-footer-gold;
   }
 
   .resources_link-items a{
@@ -480,7 +482,17 @@
   .resources_link {
     display: flex;
     justify-content: space-between;
+    width: 40%;
+
+    & .title {
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+
   }
+
 
   .link-item {
     padding-bottom: 10px;

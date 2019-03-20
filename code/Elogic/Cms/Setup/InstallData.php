@@ -189,6 +189,7 @@ class InstallData implements InstallDataInterface
                 'identifier' => 'cms_resources_block',
                 'content' => "
 <div class='resources_link' id='resources_link'>
+<div class='resources_link-item'>
 <div data-role='collapsible' class='title'>
 <div data-role='trigger'>
                            <span>Partners</span>
@@ -209,7 +210,8 @@ class InstallData implements InstallDataInterface
 </li>
 </ul>
 </div>
-                          
+</div>
+ <div class='resources_link-item'>    
                            <div data-role='collapsible' class='title'>
 <div data-role='trigger'>
                            <span>Resources</span>
@@ -237,6 +239,9 @@ class InstallData implements InstallDataInterface
 </li>
 </ul>
 </div>
+</div>
+
+<div class='resources_link-item'>
 <div data-role='collapsible' class='title'>
 <div data-role='trigger'>
  
@@ -262,6 +267,7 @@ class InstallData implements InstallDataInterface
                            <a href='#'>Exploring</a>
 </li>
 </ul>
+</div>
 </div>
 </div>
                             ",
