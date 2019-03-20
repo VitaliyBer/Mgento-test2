@@ -87,12 +87,6 @@ define([
                 "multipleCollapsible": true
             });
 
-            // if ($('div.resources_link-items').css('display') == 'block') {
-            //         $('.title').addClass('open')
-            // } else {
-            //     $('title').removeClass('open')
-            // }
-
         }
     });
 });

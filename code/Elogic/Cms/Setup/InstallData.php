@@ -192,8 +192,7 @@ class InstallData implements InstallDataInterface
 <div data-role='collapsible' class='title'>
 <div data-role='trigger'>
                            <span>Partners</span>
-                           <span class='opened'>-</span>
-                           <span class='closed'>+</span>
+                          
                           
  </div>
 </div>

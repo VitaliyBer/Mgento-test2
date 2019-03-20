@@ -119,11 +119,11 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 
   .open {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
   }
   .closed {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
   }
   .footer.content {
@@ -240,22 +240,32 @@
   }
   .resources_link {
     margin-bottom: 30px;
+    border-bottom: 1px solid @color-footer-gold;
   }
   .title{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     padding: 10px;
+
+    & div {
+      display: flex;
+      justify-content: space-between;
+    }
   }
-  .title:not(:last-child) {
-    border-bottom: 1px solid @color-footer-gold;
+  .title:not(:first-child) {
+    border-top: 1px solid @color-footer-gold;
   }
 
   .resources_link-items a{
-    font-size: 14px;
+    font-size: 12px;
     padding: 10px;
   }
   .resources_link-items {
-    border-bottom: 1px solid @color-footer-gold;
+    display: none;
+
+    &.link-item {
+      margin-bottom: 10px;
+    }
   }
 
 
@@ -323,6 +333,18 @@
   }
   .support_returns::before {
     position: absolute;
+  }
+  .title:before {
+    content: '\25c1';
+    position: absolute;
+    right: 20px;
+  }
+
+  .active:before {
+    content: "\25bf";
+    position: absolute;
+    right: 20px;
+
   }
 
 
