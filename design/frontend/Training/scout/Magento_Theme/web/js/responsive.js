@@ -44,6 +44,9 @@ define([
                 galleryElement.gallery('option', 'showNav', false);
                 galleryElement.gallery('option', 'showThumbs', true);
             }
+          let $prime =  $('#resources_link').data();
+            console.log($prime)
+
         },
 
         /**
