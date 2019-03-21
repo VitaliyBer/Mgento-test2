@@ -44,7 +44,6 @@ define([
                 galleryElement.gallery('option', 'showNav', false);
                 galleryElement.gallery('option', 'showThumbs', true);
             }
-            $('#resources_link').accordion('remove');
         },
 
         /**
