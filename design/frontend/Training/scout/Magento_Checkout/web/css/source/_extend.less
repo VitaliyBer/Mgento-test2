@@ -1,0 +1,78 @@
+//
+//  Common (style-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+
+  .minicart-wrapper {
+
+    & .action.showcart {
+      &:before {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 35px;
+        line-height: 33px;
+        color: #8f8f8f;
+        content: ' ';
+        background-image: url("../images/sprite-header-toolbar.png");
+        background-repeat: no-repeat;
+        margin: 0;
+        vertical-align: top;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        speak: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+//_____________Mobile
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .minicart-wrapper {
+
+    & .action.showcart:before {
+      position: absolute;
+      right: -5px;
+      bottom: 4px;
+      width: 40px;
+      height: 25px;
+      background-size: 180px;
+      background-position: -145px 0;
+    }
+
+  }
+}
+
+//
+//Desktop
+//
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .minicart-wrapper {
+
+    & .action.showcart {
+
+      & .text {
+        position: relative;
+        right: 23px;
+        top: 32px;
+        color: @color-black;
+
+      }
+
+      &:before {
+        position: absolute;
+        right: 5px;
+        bottom: 50px;
+        width: 50px;
+        height: 30px;
+        background-size: 215px;
+        background-position: -185px 0;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,45 @@
+//
+//  Common (style-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+  .authorization-link {
+    position: absolute;
+    content: ' ';
+    display: inline-block;
+    background-image: url("../images/sprite-header-toolbar.png");
+    background-repeat: no-repeat;
+
+    & a {
+      display: block;
+      text-align: center;
+      height: 100%;
+    }
+  }
+
+}
+
+//
+//Mobile
+//
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .authorization-link {
+    right: 30px;
+    width: 40px;
+    height: 25px;
+    background-size: 180px;
+  }
+}
+
+//
+//Desktop
+//
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .authorization-link {
+    right: 100px;
+    width: 50px;
+    height: 30px;
+    background-size: 225px;
+  }
+}
