@@ -6,10 +6,11 @@
 define([
     'jquery',
     'matchMedia',
+    'accordion',
     'mage/tabs',
     'domReady!',
-    'accordion'
-], function ($, mediaCheck) {
+    'jquery/ui'
+], function ($, mediaCheck, accordion) {
     'use strict';
 
     mediaCheck({
@@ -44,9 +45,14 @@ define([
                 galleryElement.gallery('option', 'showNav', false);
                 galleryElement.gallery('option', 'showThumbs', true);
             }
-          let $prime =  $('#resources_link').data();
-            console.log($prime)
 
+            let $accordionData =  $('#resources_link');
+            let $resourcesItem = $('.resources_link-items');
+
+            if ($accordionData && $accordionData.data('mageAccordion')) {
+                $accordionData.accordion('destroy');
+                $resourcesItem.attr("style", "display:block")
+            }
         },
 
         /**
@@ -88,7 +94,6 @@ define([
                 "active": "active",
                 "multipleCollapsible": true
             });
-
         }
     });
 });
