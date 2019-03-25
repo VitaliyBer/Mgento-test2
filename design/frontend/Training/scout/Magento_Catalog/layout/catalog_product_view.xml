@@ -8,6 +8,9 @@
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 <body>
     <referenceBlock name="breadcrumbs" remove="true" />
+    <referenceBlock name="product.info.mailto" remove="true" />
+    <referenceBlock name="view.addto.compare" remove="true" />
     <move element="page.main.title" destination="product.info.type" before="product.info.sku"/>
+    <move element="product.price.final" destination="product.info.stock.sku" before="product.info.review" />
 </body>
 </page>
