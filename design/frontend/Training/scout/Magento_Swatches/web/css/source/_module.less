@@ -66,11 +66,25 @@
 
     .swatch {
         border-bottom: 1px solid @color-gray-light01;
+
+        &-option {
+           &.color {
+                width: 30px;
+                height: 30px;
+        }
+            &.text {
+                width: 30px;
+                height: 30px;
+                text-align: center;
+            }
+        }
         &-attribute {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-content: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
 
             &-label {
                 font-weight: @font-weight__bold;

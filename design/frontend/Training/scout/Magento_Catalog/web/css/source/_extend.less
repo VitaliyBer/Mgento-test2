@@ -16,6 +16,49 @@
       flex-direction: column-reverse;
     }
   }
+  .product-options-bottom {
+    .cart__number {
+      border: 1px solid grey;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      text-align: center;
+      color:@color-white;
+      background-color: @color-footer-grey;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+
+
+      & p {
+        padding-top: 4px;
+      }
+    }
+    .field.qty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+    }
+
+    div.control{
+      display: flex;
+      flex-direction: column;
+
+      & .label {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      & input {
+        border: none;
+        font-size: 24px;
+        height: 40px;
+
+      }
+    }
+  }
+
 
 }
 

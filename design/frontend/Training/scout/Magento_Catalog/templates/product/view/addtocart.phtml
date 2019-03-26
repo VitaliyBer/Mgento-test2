@@ -15,9 +15,9 @@
     <div class="fieldset">
         <?php if ($block->shouldRenderQuantity()): ?>
         <div class="field qty">
-            <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Qty') ?></span></label>
-            <div class="cart__number cart__plus">-</div>
+            <div class="cart__number cart__minus"><p>-</p></div>
             <div class="control">
+                <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Qty') ?></span></label>
                 <input type="number"
                        name="qty"
                        id="qty"
@@ -27,7 +27,7 @@
                        data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
                        />
             </div>
-            <div class="cart__number cart__plus">+</div>
+            <div class="cart__number cart__plus"><p>+</p></div>
         </div>
         <?php endif; ?>
 
