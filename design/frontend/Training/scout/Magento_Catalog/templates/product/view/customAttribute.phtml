@@ -40,7 +40,7 @@ if ($_attributeType && $_attributeType == 'text') {
 
 <?php if ($_attributeValue): ?>
     <div class="product attribute <?= /* @escapeNotVerified */ $_className ?>">
-        <?php if ($renderLabel): ?><strong class="type">Item:</strong><?php endif; ?>
+        <?php if ($renderLabel): ?><strong class="type"><?= $block->escapeHtml(__('Item')) ?></strong><?php endif; ?>
         <div class="value" <?= /* @escapeNotVerified */ $_attributeAddAttribute ?>><?= /* @escapeNotVerified */ $_attributeValue ?></div>
     </div>
 <?php endif; ?>

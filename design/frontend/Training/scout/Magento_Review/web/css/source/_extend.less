@@ -2,22 +2,11 @@
 //  Common (style-m.css)
 //  _____________________________________________
 & when (@media-common = true) {
-  .base {
-    font-weight: bold;
-  }
-  .product.attribute.description {
-    border-bottom: 1px solid @color-gray-light01;
-  }
-  .product-options-wrapper {
-    display: flex;
-    justify-content: center;
-
-    .fieldset {
-      flex-direction: column-reverse;
-    }
+ .reviews-actions a{
+   color:@color-nav;
+ }
   }
 
-}
 
 
 //_________Mobile
@@ -32,3 +21,4 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
 }
+
