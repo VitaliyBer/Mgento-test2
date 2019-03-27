@@ -120,7 +120,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
   .product-options-wrapper {
-    height: 300px;
+    height: 250px;
     justify-content: start;
   }
 
@@ -156,11 +156,48 @@
   .product-add-form {
     position: relative;
   }
+  .product-info-main,
   .product-options-bottom {
-    .field.qty {
-      top: 100px;
+    .box-tocart {
+      display: table;
+
+      .field.qty {
+        display: flex;
+        flex-direction: row-reverse;
+        top:150px;
+        left:2px;
+      }
+
+      .actions {
+        display: table-cell;
+        padding-top: @indent__m;
+        text-align: center;
+        vertical-align: bottom;
+      }
     }
   }
+  .tocart__shipping-link {
+    padding-right: 5px;
+
+    &::before {
+      content: ' ';
+      width: 35px;
+      height: 15px;
+      margin-right: 4px;
+      display: inline-block;
+      background-image: url("../images/ico-car-blue.png");
+      background-size: 35px;
+      background-repeat: no-repeat;
+    }
+  }
+  .action.primary.tocart {
+    width: 300px;
+  }
+  .product-addto-links {
+    display: flex;
+    justify-content: start;
+  }
+
   .description_product {
     float:none;
     clear: both;
