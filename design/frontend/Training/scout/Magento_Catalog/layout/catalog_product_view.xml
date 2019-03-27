@@ -33,7 +33,7 @@
 
         <referenceContainer name="product.info.price">
             <block class="Magento\Catalog\Block\Product\View\Description" name="custom.product.info.description"
-                   as="description" template="Magento_Catalog::product/view/customAttribute.phtml" group="detailed_info"
+                   as="description" template="Magento_Catalog::product/view/attribute.phtml" group="detailed_info"
                    after="product.price.final">
                 <arguments>
                     <argument name="at_call" xsi:type="string">getDescription</argument>
@@ -46,7 +46,7 @@
         </referenceContainer>
 
         <referenceContainer name="content">
-        <container name="description.product" htmlTag="div" htmlClass="description_product" after="product.info.media">
+        <container name="description.product" htmlTag="div" htmlClass="description_product" after="-">
             <block class="Magento\Catalog\Block\Product\View" name="product.description"
                    template="Magento_Catalog::product/view/descriptionProduct.phtml">
             </block>
@@ -59,7 +59,7 @@
             </container>
             <container name="description__block" htmlTag="div" htmlClass="description_block" after="-">
             <block class="Magento\Catalog\Block\Product\View\Description" name="custom.product.description"
-                   as="description" template="Magento_Catalog::product/view/customAttribute.phtml" group="detailed_info"
+                   as="description" template="Magento_Catalog::product/view/attribute.phtml" group="detailed_info"
                    after="product.description">
                 <arguments>
                     <argument name="text" xsi:type="string">Details</argument>
