@@ -10,11 +10,11 @@
   }
   .product-options-wrapper {
     display: flex;
-    justify-content: center;
+  }
 
-    .fieldset {
-      flex-direction: column-reverse;
-    }
+  .swatch-opt  {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .product-options-bottom {
     .cart__number {
@@ -34,7 +34,11 @@
         padding-top: 4px;
       }
     }
+
     .field.qty {
+      position: absolute;
+      top:210px;
+      left: 27%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -57,15 +61,56 @@
 
       }
     }
+    .tocart__free-shipping {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+
+      & a {
+        text-transform: uppercase;
+        color:@color-nav;
+        font-weight: bold;
+      }
+    }
+    .action.primary.tocart {
+      background-color: @color-cart-red;
+      text-transform: uppercase;
+      border:none;
+      font-size: 14px;
+    }
   }
+  .product-addto-links {
 
+    padding-bottom: 20px;
 
+    .action.towishlist  {
+      text-transform: uppercase;
+      color:@color-cart-red;
+      border: 1px solid @color-cart-red;
+      border-radius:5px;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+.product.attribute.description {
+  & .value p:not(:first-child) {
+    display: none;
+  }
+}
 }
 
 
 //_________Mobile
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .product-options-wrapper {
+    height: 300px;
+    justify-content: center;
+  }
+  .product-add-form {
+    position: relative;
+  }
 
 }
 
@@ -74,4 +119,46 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
+  .product-options-wrapper {
+    height: 300px;
+    justify-content: start;
+  }
+
+.swatch-attribute {
+  &.color  {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &.size {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &-options {
+    padding-left: 80px;
+  }
+  &-selected-option {
+    position: absolute;
+    top:20px;
+  }
+}
+.color {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+  .product-add-form {
+    position: relative;
+  }
+  .product-options-bottom {
+    .field.qty {
+      top: 100px;
+    }
+  }
 }
