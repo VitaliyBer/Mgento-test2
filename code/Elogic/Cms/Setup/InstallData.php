@@ -321,14 +321,26 @@ class InstallData implements InstallDataInterface
 <div class='free__shipping-cart'>
 <ul class='shipping__cart-items'>
 <li class='shipping__item'>
+<p><a href='#'>
+ <img src='{{view url='images/shipping-car-ico.png'}}'
+                 alt='shipping-car'>
+</a></p>
 <p class='title'>free shipping</p>
 <p class='text'>On all orders over $50 lorem ipsum dolor sit</p>
 </li>
-<li>
+<li class='shipping__item'>
+<p><a href='#'>
+ <img src='{{view url='images/shipping-return-ico.png'}}'
+                 alt='shipping-returns'>
+</a></p>
 <p class='title'>Hassle free returns</p>
 <p class='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </li>
-<li>
+<li class='shipping__item'>
+<p><a href='#'>
+ <img src='{{view url='images/shipping-help-ico.png'}}'
+                 alt='shipping-help'>
+</a></p>
 <p class='title'>Need help</p>
 <p class='text'>Lorem ipsum dolor sit amet.</p>
 <p class='phone'>1-800-323-0736</p>
