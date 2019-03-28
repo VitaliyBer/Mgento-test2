@@ -30,9 +30,17 @@
       margin-top: 20px;
 
 
-      & p {
+      & a {
+        display: inline-block;
         padding-top: 4px;
+        color:@color-white;
+        text-decoration: none;
+        user-select: none;
       }
+    }
+    .cart__plus,.cart__minus {
+      cursor:pointer;
+
     }
 
     .field.qty {
@@ -52,6 +60,7 @@
       & .label {
         text-align: center;
         text-transform: uppercase;
+        user-select: none;
       }
 
       & input {
@@ -184,7 +193,7 @@
 
       .field.qty {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         top:150px;
         left:2px;
       }

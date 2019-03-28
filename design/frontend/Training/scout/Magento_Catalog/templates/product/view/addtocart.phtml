@@ -14,10 +14,10 @@
 <div class="box-tocart">
     <div class="fieldset">
         <?php if ($block->shouldRenderQuantity()): ?>
-        <div class="field qty">
-            <div class="cart__number cart__minus"><p>-</p></div>
+        <div class="field qty"  data-mage-init='{"qty": {}}'>
+            <div class="cart__number cart__minus"><a>-</a></div>
             <div class="control">
-<!--                data-mage-init='{"qyt": {"text":"1"}'-->
+
                 <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Qty') ?></span></label>
                 <input type="number"
                        name="qty"
@@ -28,7 +28,7 @@
                        data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
                        />
             </div>
-            <div class="cart__number cart__plus"><p>+</p></div>
+            <div class="cart__number cart__plus"><a>+</a></div>
         </div>
         <?php endif; ?>
 
