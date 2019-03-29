@@ -1,7 +1,8 @@
 var config = {
     "map": {
         "*": {
-            "qty":"js/qty"
+            "qty":"js/qty",
+            "scrollCart":"js/scrollCart"
         }
     }
 };
