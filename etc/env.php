@@ -12,7 +12,7 @@ return [
             'default' => [
                 'host' => 'magento2_db',
                 'dbname' => 'magento2',
-		'profiler' => '1',
+                'profiler' => '1',
                 'username' => 'root',
                 'password' => '111111',
                 'model' => 'mysql4',
