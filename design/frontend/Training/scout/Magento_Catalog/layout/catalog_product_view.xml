@@ -45,6 +45,10 @@
             </block>
         </referenceContainer>
 
+
+
+
+
         <referenceContainer name="content">
         <container name="description.product" htmlTag="div" htmlClass="description_product" after="-">
             <block class="Magento\Catalog\Block\Product\View" name="product.description"

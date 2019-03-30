@@ -24,22 +24,18 @@ define([
         _cartMinus: function (e) {
             e.preventDefault();
             let widgetValue = parseInt($('#qty').val());
-            if (!isNaN(widgetValue) && widgetValue > 1) {
-                $('#qty').val(widgetValue - 1);
-            } else {
-                $('#qty').val(1);
-            }
+
+            !isNaN(widgetValue) && widgetValue > 1 ? $('#qty').val(widgetValue - 1) : $('#qty').val(1);
+
         },
 
         _cartPlus: function (e) {
             e.preventDefault();
             let widgetValue = parseInt($('#qty').val());
-            if (!isNaN(widgetValue)) {
-                $('#qty').val(widgetValue + 1);
-            } else {
-                $('#qty').val(1);
-            }
-        }
+
+            !isNaN(widgetValue) ? $('#qty').val(widgetValue + 1) : $('#qty').val(1);
+
+        },
 
     });
 

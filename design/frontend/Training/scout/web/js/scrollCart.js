@@ -42,7 +42,7 @@ define([
             $('#link__reviews').addClass('active__link')
 
         }
-    })
+    });
 
 
     return $.mage.scrollCart;
