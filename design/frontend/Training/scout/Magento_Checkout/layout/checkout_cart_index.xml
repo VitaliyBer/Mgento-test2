@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_cart_item_renderers"/>
+    <body>
+
+        <move element="cart.summary" destination="checkout.cart.container" after="checkout.cart.shipping"/>
+<!--        <referenceBlock name="checkout.cart.form" remove="true" />-->
+
+        <referenceBlock name="page.main.title" display="true">
+            <action method="setPageTitle">
+                <argument name="title" translate="true" xsi:type="string">Cart</argument>
+            </action>
+        </referenceBlock>
+
+
+
+        <referenceBlock name="breadcrumbs">
+                <action method="addCrumb">
+                    <argument name="crumbName" xsi:type="string">Home</argument>
+                    <argument name="crumbInfo" xsi:type="array">
+                        <item name="title" xsi:type="string">Home</item>
+                        <item name="label" xsi:type="string">Home</item>
+                        <item name="link" xsi:type="string">{{baseUrl}}</item>
+                    </argument>
+                </action>
+                <action method="addCrumb">
+                    <argument name="crumbName" xsi:type="string">Cart</argument>
+                    <argument name="crumbInfo" xsi:type="array">
+                        <item name="title" xsi:type="string">Cart</item>
+                        <item name="label" xsi:type="string">Cart</item>
+                    </argument>
+                </action>
+        </referenceBlock>
+
+
+<!--        <referenceContainer name="checkout.cart.container">-->
+<!--            <block class="Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist" name="view.cart.wishlist"-->
+<!--                   template="Magento_Wishlist::catalog/product/view/addto/wishlist.phtml" after="-" />-->
+<!--        </referenceContainer>-->
+
+
+    </body>
+</page>
