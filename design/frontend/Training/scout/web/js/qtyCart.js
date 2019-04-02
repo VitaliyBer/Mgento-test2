@@ -29,7 +29,7 @@ define([
             let input = $("input#" + inputId);
             let widgetValue = parseInt(input.val());
 
-            !isNaN(widgetValue) && widgetValue > 1 ? input.val(widgetValue - 1) :input.val(1);
+            !isNaN(widgetValue) && widgetValue > 1 ? input.val(widgetValue - 1) : input.val(1);
 
         },
 

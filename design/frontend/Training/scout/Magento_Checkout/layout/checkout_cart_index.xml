@@ -38,6 +38,12 @@
                 </action>
         </referenceBlock>
 
+        <referenceBlock name="checkout.cart.summary.title">
+            <arguments>
+            <argument translate="true" name="text" xsi:type="string">Order Summary</argument>
+            </arguments>
+        </referenceBlock>
+
 
 <!--        <referenceContainer name="checkout.cart.container">-->
 <!--            <block class="Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist" name="view.cart.wishlist"-->
