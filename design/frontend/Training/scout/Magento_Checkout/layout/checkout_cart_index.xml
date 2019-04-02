@@ -10,7 +10,7 @@
     <body>
 
         <move element="cart.summary" destination="checkout.cart.container" after="checkout.cart.shipping"/>
-<!--        <referenceBlock name="checkout.cart.form" remove="true" />-->
+
 
         <referenceBlock name="page.main.title" display="true">
             <action method="setPageTitle">

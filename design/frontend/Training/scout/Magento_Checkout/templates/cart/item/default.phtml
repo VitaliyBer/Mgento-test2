@@ -40,10 +40,11 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                         <?= $block->escapeHtml($block->getProductName()) ?>
                     <?php endif; ?>
                 </strong>
-                <div><strong class="type"><?= $block->escapeHtml(__('SKU')) ?>: &nbsp;</strong><?php echo $_item->getSku() ?></div>
                 <?php if ($_options = $block->getOptionList()):?>
 
                     <dl class="item-options">
+                        <dt><?= $block->escapeHtml(__('SKU')) ?></dt>
+                        <dd><?php echo $_item->getSku() ?></dd>
                         <?php foreach ($_options as $_option) : ?>
                             <?php $_formatedOptionValue = $block->getFormatedOptionValue($_option) ?>
                             <dt><?= $block->escapeHtml($_option['label']) ?></dt>
@@ -83,11 +84,11 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
             </td>
         <?php endif; ?>
         <td class="col qty">
-            <div class="field qty"  data-mage-init='{"qty": {}}'>
+            <div class="field qty"  data-mage-init='{"qtyCart": {}}'>
                 <label class="label" for="cart-<?= /* @escapeNotVerified */ $_item->getId() ?>-qty">
                     <span><?= /* @escapeNotVerified */ __('Qty') ?></span>
                 </label>
-                <div class="cart__number cart__minus"><a>-</a></div>
+                <div class="cart__number cart__minus" id="cart-<?= /* @escapeNotVerified */ $_item->getId() ?>-qty"><a>-</a></div>
                 <div class="control qty">
                     <input id="cart-<?= /* @escapeNotVerified */ $_item->getId() ?>-qty"
                            name="cart[<?= /* @escapeNotVerified */ $_item->getId() ?>][qty]"
@@ -100,7 +101,7 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                            data-validate="{required:true,'validate-greater-than-zero':true}"
                            data-role="cart-item-qty"/>
                 </div>
-                <div class="cart__number cart__plus"><a>+</a></div>
+                <div class="cart__number cart__plus" id="cart-<?= /* @escapeNotVerified */ $_item->getId() ?>-qty"><a>+</a></div>
             </div>
         </td>
 
