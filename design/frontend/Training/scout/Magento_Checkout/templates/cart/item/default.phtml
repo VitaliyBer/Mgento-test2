@@ -82,7 +82,12 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                     </a>
                 </span>
             </td>
+        <?php else: ?>
+        <td class="col price" data-th="<?= $block->escapeHtml(__('Price')) ?>">
+            <?= $block->getUnitPriceHtml($_item) ?>
+        </td>
         <?php endif; ?>
+        <td class="col qty" data-th="<?= $block->escapeHtml(__('Qty')) ?>">
         <td class="col qty">
             <div class="field qty"  data-mage-init='{"qtyCart": {}}'>
                 <label class="label" for="cart-<?= /* @escapeNotVerified */ $_item->getId() ?>-qty">

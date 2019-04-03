@@ -2,7 +2,6 @@
 //  Common (style-m.css)
 //  _____________________________________________
 & when (@media-common = true) {
-
   .minicart-wrapper {
 
     & .action.showcart {
@@ -79,18 +78,6 @@
       }
     }
 
-    .action.action-delete {
-      position: absolute;
-      right: 0px;
-      top: 20px;
-      width: 20px;
-      height: 20px;
-      opacity: 1;
-
-      & span{
-      display: none;
-      }
-    }
 
     .action.action-delete:hover {
       opacity: 1;
@@ -117,6 +104,58 @@
       transform: rotate(-45deg);
     }
   }
+.cart-summary {
+  width: 100%;
+  & .summary {
+    &.title {
+      color:@color-nav;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+  }
+}
+  .grand.totals {
+    border-top: 1px solid @color-border;
+  }
+  .totals.sub {
+    & .price {
+      color:@color-nav;
+    }
+  }
+  .grand.totals {
+    & .price {
+      color:@color-nav;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    & .mark strong{
+      color:@color-nav;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+  .action.primary.checkout {
+    background-color: @color-cart-red;
+    border-color: @color-cart-red;
+  }
+  button.action.update {
+    background: none;
+    border-color: red;
+    color:red;
+    padding: 15px;
+    border-radius: 5px;
+
+    & a {
+      text-align: center;
+    }
+  }
+  .block-cart-failed .action.update:before, .cart-container .form-cart .action.update:before {
+    display: none;
+  }
+  .cart-container .form-cart .action.update {
+    padding-left: 15px;
+  }
 
 
 }
@@ -125,6 +164,7 @@
 //_____________Mobile
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
   .minicart-wrapper {
 
     & .action.showcart:before {
@@ -171,6 +211,8 @@
       position: relative;
       display: flex;
       justify-content: space-around;
+      margin-right: 15px;
+      margin-left: 15px;
     }
 
     & .col.subtotal {
@@ -178,7 +220,13 @@
       right: -20px;
       bottom: 20px;
     }
+  }
 
+  .cart.table-wrapper .col.price{
+    display: none;
+  }
+  .cart.table-wrapper .col.qty[data-th]:before{
+   content: none;
   }
 
   .cart.table-wrapper .col.qty {
@@ -188,23 +236,29 @@
   .block.crosssell {
     display: none;
   }
-  button.action.update {
-    background: none;
-    border-color: red;
-    color:red;
-    padding: 15px;
-    border-radius: 5px;
 
-    & a {
-      text-align: center;
+  .checkout-cart-index .page-main {
+    margin: 0;
+  }
+  .page-title {
+    margin-left: 15px;
+  }
+  .action.action-delete {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+
+    & span{
+      display: none;
     }
   }
-   .block-cart-failed .action.update:before, .cart-container .form-cart .action.update:before {
-    display: none;
-  }
-  .cart-container .form-cart .action.update {
-    padding-left: 15px;
-  }
+
+
+
+
 }
 
 //
@@ -239,6 +293,37 @@
         background-position: -185px 0;
       }
     }
+  }
+
+  .shopping-cart-table {
+     thead tr{
+     position: absolute;
+    }
+  }
+
+  .page-title {
+    margin-left: 25px;
+  }
+
+  .actions-toolbar {
+    position: relative;
+  }
+
+  .action.action-delete {
+    position: absolute;
+    right: -50px;
+    top:-100px;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+
+    & span{
+    display: none;
+    }
+  }
+  .products.wrapper.grid.products-grid.products-crosssell {
+    display: flex;
+    flex-direction: column;
   }
 }
 
