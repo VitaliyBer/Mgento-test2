@@ -3,7 +3,8 @@ var config = {
         "*": {
 
             "scrollCart":"js/scrollCart",
-            "qtyCart":"js/qtyCart"
+            "qtyCart":"js/qtyCart",
+            "ajaxQty":"Magento_Checkout/js/cartAjaxQtyUpdate"
         }
     }
 };
