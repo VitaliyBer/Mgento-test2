@@ -57,16 +57,6 @@
         vertical-align: top;
         width: 50%;
 
-        //&:before { // Horizontal line
-        //    .lib-css(background, @checkout-progress-bar-item__background-color);
-        //    .lib-css(top, @checkout-progress-bar-item-element__width/2);
-        //    content: '';
-        //    height: 7px;
-        //    left: 0;
-        //    position: absolute;
-        //    width: 100%;
-        //}
-
         &:first-child {
             &:before {
                 .lib-css(border-radius, @checkout-progress-bar-item__border-radius 0 0 @checkout-progress-bar-item__border-radius);
@@ -94,7 +84,7 @@
             @_line-height: false
             );
 
-            &:before, // Item element
+            //&:before, // Item element
             &:after {
                 .lib-css(background, @checkout-progress-bar-item__background-color);
                 .lib-css(height, @checkout-progress-bar-item-element__height);
