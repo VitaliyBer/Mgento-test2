@@ -157,6 +157,13 @@
     padding-left: 15px;
   }
 
+  .checkout-index-index{
+    input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
+        height: 40px;
+    }
+  }
+
+
 
 }
 
@@ -355,6 +362,54 @@
   }
   .cart-summary {
     height: 100vh;
+  }
+   .checkout-index-index .nav-toggle {
+    display: none;
+  }
+  .block.items-in-cart .title{
+    color:@color-nav;
+    font-weight: bold;
+    border-bottom:none;
+    padding-top:30px;
+    border-top:1px solid @color-border;
+
+    &::after {
+      margin-top: 20px;
+      padding-top: 5px;
+      content:'+';
+      font-size:20px;
+      color:@color-white;
+      border:1px solid @color-nav;
+      background-color: @color-nav;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+  }
+
+  .checkout-index-index {
+   & .page-main {
+     position: relative;
+   }
+
+    & .opc-block-summary {
+      position: absolute;
+      top:0;
+      right: 0;
+      height: 100%;
+      width: 30%;
+
+      & .items-in-cart.active > .title:after {
+        content: "-";
+      }
+    }
+  }
+
+
+
+
+  .amount {
+    float: right;
   }
 }
 

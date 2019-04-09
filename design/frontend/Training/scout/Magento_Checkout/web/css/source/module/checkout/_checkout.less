@@ -15,7 +15,7 @@
 @checkout-step-title__font-weight: @font-weight__light;
 @checkout-step-title__padding: @indent__s;
 
-@checkout-step-title-mobile__font-size: 18px;
+@checkout-step-title-mobile__font-size: 16px;
 
 //
 //  Common
@@ -82,6 +82,18 @@
             padding-bottom: 0;
         }
     }
+    .opc-estimated-wrapper {
+        font-size: 16px;
+
+        &.minicart-wrapper {
+
+            &.action .showcart::before {
+                content: "";
+            }
+        }
+    }
+
+
 }
 
 //
