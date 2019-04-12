@@ -15,8 +15,15 @@ let config = {
 
             'Magento_Checkout/js/view/summary/shipping': {
                 'Magento_Checkout/js/shipping-mixin': true
-            }
+            },
 
+            'Magento_Checkout/js/view/shipping': {
+                'Elogic_NewStep/js/view/shipping-payment-mixin': true
+            },
+
+            'Magento_Checkout/js/view/payment': {
+                'Elogic_NewStep/js/view/shipping-payment-mixin': true
+            }
         }
 
     }

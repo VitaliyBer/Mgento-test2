@@ -1,5 +1,4 @@
-define([
-], function () {
+define([], function () {
     "use strict";
 
     let mixin = {
@@ -13,9 +12,8 @@ define([
         }
     };
 
-        return function (target) {
+    return function (target) {
 
-
-            return target.extend(mixin);
-        }
+        return target.extend(mixin);
+    }
 });
