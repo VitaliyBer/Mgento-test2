@@ -87,21 +87,21 @@ class LayoutProcessor
             return $jsLayoutResult;
         }
 
-        if (isset($jsLayoutResult['components']['checkout']['children']['steps']['children']['my-new-step']['children']
+        if (isset($jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']['children']
             ['shippingAddress']['children']['shipping-address-fieldset'])) {
 
-            $jsLayoutResult['components']['checkout']['children']['steps']['children']['my-new-step']
+            $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
             ['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['street']['children'][0]['placeholder'] = __('Street Address');
             $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
             ['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['street']['children'][1]['placeholder'] = __('Street line 2');
 
             $elements = $this->getAddressAttributes();
-            $jsLayoutResult['components']['checkout']['children']['steps']['children']['my-new-step']
+            $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
             ['children']['shippingAddress']['children']['billing-address'] = $this->getCustomBillingAddressComponent($elements);
 
-            $jsLayoutResult['components']['checkout']['children']['steps']['children']['my-new-step']
+            $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
             ['children']['shippingAddress']['children']['billing-address']['children']['form-fields']['children']['street']['children'][0]['placeholder'] = __('Street Address');
-            $jsLayoutResult['components']['checkout']['children']['steps']['children']['my-new-step']
+            $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
             ['children']['shippingAddress']['children']['billing-address']['children']['form-fields']['children']['street']['children'][1]['placeholder'] = __('Street line 2');
         }
 
