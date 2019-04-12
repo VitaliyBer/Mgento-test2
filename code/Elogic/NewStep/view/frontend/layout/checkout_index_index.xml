@@ -17,6 +17,7 @@
                                             <item name="sortOrder" xsi:type="string">2</item>
                                             <item name="children" xsi:type="array">
                                                 <!--add here child component declaration for your step-->
+
                                             </item>
                                         </item>
                                     </item>
