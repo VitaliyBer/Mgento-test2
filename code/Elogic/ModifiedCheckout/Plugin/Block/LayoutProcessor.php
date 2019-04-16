@@ -1,6 +1,5 @@
 <?php
-
-namespace Elogic\NewStep\Plugin\Block;
+namespace Elogic\ModifiedCheckout\Plugin\Block;
 
 use Magento\Customer\Model\AttributeMetadataDataProvider;
 use Magento\Ui\Component\Form\AttributeMapper;
@@ -143,7 +142,7 @@ class LayoutProcessor
     public function getCustomBillingAddressComponent($elements)
     {
         return [
-            'component' => 'Elogic_NewStep/js/view/billing-address',
+            'component' => 'Elogic_ModifiedCheckout/js/view/billing-address',
             'displayArea' => 'billing-address',
             'provider' => 'checkoutProvider',
             'deps' => ['checkoutProvider'],

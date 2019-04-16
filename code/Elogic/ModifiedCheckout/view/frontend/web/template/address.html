@@ -4,11 +4,7 @@
          class="step-content"
          data-role="content">
 
-        <!-- ko if: (!quoteIsVirtual) -->
-        <!-- ko foreach: getRegion('customer-email') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
-        <!--/ko-->
-        <!--/ko-->
+
 
         <!-- ko foreach: getRegion('address-list') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
@@ -37,6 +33,12 @@
         <!-- ko if: (isFormInline) -->
         <!-- ko template: 'Magento_Checkout/shipping-address/form' --><!-- /ko -->
         <!-- /ko -->
+
+        <!-- ko if: (!quoteIsVirtual) -->
+        <!-- ko foreach: getRegion('customer-email') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+        <!--/ko-->
 
         <!-- ko if: (isFormInline) -->
         <span class="mandatory" data-bind="i18n: 'Mandatory fields'"></span>
@@ -69,12 +71,12 @@
                 <div id="checkout-shipping-method-load">
                     <table class="table-checkout-shipping-method">
                         <thead>
-                        <tr class="row">
-                            <th class="col col-method" data-bind="i18n: 'Select Method'"></th>
-                            <th class="col col-price" data-bind="i18n: 'Price'"></th>
-                            <th class="col col-method" data-bind="i18n: 'Method Title'"></th>
-                            <th class="col col-carrier" data-bind="i18n: 'Carrier Title'"></th>
-                        </tr>
+                            <tr class="row">
+                                <th class="col col-method" data-bind="i18n: 'Select Method'"></th>
+                                <th class="col col-price" data-bind="i18n: 'Price'"></th>
+                                <th class="col col-method" data-bind="i18n: 'Method Title'"></th>
+                                <th class="col col-carrier" data-bind="i18n: 'Carrier Title'"></th>
+                            </tr>
                         </thead>
                         <tbody>
 
@@ -113,10 +115,10 @@
                             </td>
 
                             <td class="col col-method"
-                                data-bind="text: method.method_title, attr: {'id': 'label_method_' + method.method_code + '_' + method.carrier_code}"></td>
+                                    data-bind="text: method.method_title, attr: {'id': 'label_method_' + method.method_code + '_' + method.carrier_code}"></td>
 
                             <td class="col col-carrier"
-                                data-bind="text: method.carrier_title, attr: {'id': 'label_carrier_' + method.method_code + '_' + method.carrier_code}"></td>
+                                    data-bind="text: method.carrier_title, attr: {'id': 'label_carrier_' + method.method_code + '_' + method.carrier_code}"></td>
                         </tr>
 
                         <!-- ko if:  method.error_message -->

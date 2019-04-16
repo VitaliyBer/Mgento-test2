@@ -57,7 +57,7 @@ define(
 
         return Component.extend({
             defaults: {
-                template: 'Elogic_NewStep/billing-address'
+                template: 'Elogic_ModifiedCheckout/billing-address'
             },
             currentBillingAddress: quote.billingAddress,
             addressOptions: addressOptions,
