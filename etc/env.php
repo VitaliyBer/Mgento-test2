@@ -4,21 +4,20 @@ return [
         'frontName' => 'admin'
     ],
     'crypt' => [
-        'key' => '8a42366bbccd127d9ff3dd2a8a02402d'
+        'key' => 'dfb8f7e5b29cff4352589f0e2d42352e'
     ],
     'db' => [
         'table_prefix' => '',
         'connection' => [
             'default' => [
-                'host' => 'magento2_db',
+                'host' => 'magento2_mysql',
                 'dbname' => 'magento2',
-                'profiler' => '1',
-                'username' => 'root',
-                'password' => '111111',
+                'username' => 'magento2',
+                'password' => 'magento2',
+                'active' => '1',
                 'model' => 'mysql4',
                 'engine' => 'innodb',
-                'initStatements' => 'SET NAMES utf8;',
-                'active' => '1'
+                'initStatements' => 'SET NAMES utf8;'
             ]
         ]
     ],
@@ -28,7 +27,7 @@ return [
         ]
     ],
     'x-frame-options' => 'SAMEORIGIN',
-    'MAGE_MODE' => 'developer',
+    'MAGE_MODE' => 'default',
     'session' => [
         'save' => 'files'
     ],
@@ -50,6 +49,6 @@ return [
         'vertex' => 1
     ],
     'install' => [
-        'date' => 'Tue, 26 Feb 2019 12:48:10 +0000'
+        'date' => 'Tue, 16 Apr 2019 07:07:02 +0000'
     ]
 ];
