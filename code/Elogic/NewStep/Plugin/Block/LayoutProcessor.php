@@ -47,8 +47,7 @@ class LayoutProcessor
         AttributeMapper $attributeMapper,
         AttributeMerger $merger,
         CheckoutSession $checkoutSession
-    )
-    {
+    ) {
         $this->attributeMetadataDataProvider = $attributeMetadataDataProvider;
         $this->attributeMapper = $attributeMapper;
         $this->merger = $merger;
@@ -78,16 +77,15 @@ class LayoutProcessor
         \Magento\Checkout\Block\Checkout\LayoutProcessor $subject,
         \Closure $proceed,
         array $jsLayout
-    )
-    {
+    ) {
 
         $jsLayoutResult = $proceed($jsLayout);
 
-        if ($this->getQuote()->isVirtual()) {
+        if($this->getQuote()->isVirtual()) {
             return $jsLayoutResult;
         }
 
-        if (isset($jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']['children']
+        if(isset($jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']['children']
             ['shippingAddress']['children']['shipping-address-fieldset'])) {
 
             $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']

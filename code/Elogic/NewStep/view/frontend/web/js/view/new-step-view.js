@@ -35,7 +35,7 @@ define(
                 // register your step
                 stepNavigator.registerStep(
                     //step code will be used as step content id in the component template
-                    'step_code',
+                    'billing',
                     //step alias
                     null,
                     //step title value
