@@ -1,5 +1,6 @@
 <?php
-namespace Elogic\ModifiedCheckout\Plugin\Block;
+
+namespace Elogic\Checkout\Plugin\Block;
 
 use Magento\Customer\Model\AttributeMetadataDataProvider;
 use Magento\Ui\Component\Form\AttributeMapper;
@@ -46,7 +47,8 @@ class LayoutProcessor
         AttributeMapper $attributeMapper,
         AttributeMerger $merger,
         CheckoutSession $checkoutSession
-    ) {
+    )
+    {
         $this->attributeMetadataDataProvider = $attributeMetadataDataProvider;
         $this->attributeMapper = $attributeMapper;
         $this->merger = $merger;
@@ -72,37 +74,20 @@ class LayoutProcessor
      * @param array $jsLayout
      * @return array
      */
-    public function aroundProcess(
+    public function afterProcess(
         \Magento\Checkout\Block\Checkout\LayoutProcessor $subject,
-        \Closure $proceed,
         array $jsLayout
-    ) {
+    )
+    {
 
-        $jsLayoutResult = $proceed($jsLayout);
 
-        if($this->getQuote()->isVirtual()) {
-            return $jsLayoutResult;
-        }
+        $billingAddressForm = $jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']['payment']['children']['afterMethods']['children']['billing-address-form'];
+        $jsLayout['components']['checkout']['children']['steps']['children']['my-new-step']['children']['billing-address-form'] = $billingAddressForm;
+        unset($jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']['payment']['children']['afterMethods']['children']['billing-address-form']);
 
-        if(isset($jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']['children']
-            ['shippingAddress']['children']['shipping-address-fieldset'])) {
 
-            $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
-            ['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['street']['children'][0]['placeholder'] = __('Street Address');
-            $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
-            ['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['street']['children'][1]['placeholder'] = __('Street line 2');
+        return $jsLayout;
 
-            $elements = $this->getAddressAttributes();
-            $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
-            ['children']['shippingAddress']['children']['billing-address'] = $this->getCustomBillingAddressComponent($elements);
-
-            $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
-            ['children']['shippingAddress']['children']['billing-address']['children']['form-fields']['children']['street']['children'][0]['placeholder'] = __('Street Address');
-            $jsLayoutResult['components']['checkout']['children']['steps']['children']['shipping-step']
-            ['children']['shippingAddress']['children']['billing-address']['children']['form-fields']['children']['street']['children'][1]['placeholder'] = __('Street line 2');
-        }
-
-        return $jsLayoutResult;
     }
 
     /**
@@ -142,7 +127,7 @@ class LayoutProcessor
     public function getCustomBillingAddressComponent($elements)
     {
         return [
-            'component' => 'Elogic_ModifiedCheckout/js/view/billing-address',
+            'component' => 'Elogic_Checkout/js/view/billing-address',
             'displayArea' => 'billing-address',
             'provider' => 'checkoutProvider',
             'deps' => ['checkoutProvider'],

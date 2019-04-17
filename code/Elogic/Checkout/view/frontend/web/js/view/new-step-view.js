@@ -20,7 +20,7 @@ define(
          */
         return Component.extend({
             defaults: {
-                template: 'Elogic_NewStep/newstep'
+                template: 'Elogic_Checkout/newstep'
             },
 
             //add here your logic to display step,
