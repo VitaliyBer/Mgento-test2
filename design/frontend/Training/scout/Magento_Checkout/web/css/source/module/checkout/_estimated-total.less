@@ -9,42 +9,42 @@
 
 & when (@media-common = true) {
 
-    //
-    //  Checkout Estimated Total
-    //  ---------------------------------------------
+  //
+  //  Checkout Estimated Total
+  //  ---------------------------------------------
 
-    .opc-estimated-wrapper {
-        &:extend(.abs-add-clearfix all);
-        &:extend(.abs-no-display-desktop all);
-        margin: 15px;
-        padding: 18px 15px;
-        background-color: @color-checkout;
-        border-radius: 2px;
+  .opc-estimated-wrapper {
+    &:extend(.abs-add-clearfix all);
+    &:extend(.abs-no-display-desktop all);
+    margin: 15px;
+    padding: 18px 15px;
+    background-color: @color-checkout;
+    border-radius: 2px;
 
-        .estimated-block {
-            .lib-css(font-size, @checkout-step-title-mobile__font-size);
-            .lib-css(font-weight, @font-weight__bold);
-            float: left;
+    .estimated-block {
+      .lib-css(font-size, @checkout-step-title-mobile__font-size);
+      .lib-css(font-weight, @font-weight__bold);
+      float: left;
 
-            .estimated-label {
-                margin: 0 0 @indent__xs;
-            }
-        }
-
-        .minicart-wrapper {
-            .action {
-                &.showcart {
-                    &:before {
-                        .lib-css(color, @button__color);
-                    }
-                    
-                    &:hover:before {
-                        .lib-css(color, @button__hover__color);
-                    }
-                }
-            }
-        }
+      .estimated-label {
+        margin: 0 0 @indent__xs;
+      }
     }
+
+    .minicart-wrapper {
+      .action {
+        &.showcart {
+          &:before {
+            .lib-css(color, @button__color);
+          }
+
+          &:hover:before {
+            .lib-css(color, @button__hover__color);
+          }
+        }
+      }
+    }
+  }
 }
 
 //
@@ -52,7 +52,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .opc-estimated-wrapper {
-        display: none;
-    }
+  .opc-estimated-wrapper {
+    display: none;
+  }
 }

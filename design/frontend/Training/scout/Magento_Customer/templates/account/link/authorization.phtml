@@ -14,7 +14,9 @@ if ($block->isLoggedIn()) {
 }
 ?>
 <li class="authorization-link" data-label="<?= $block->escapeHtml(__('or')) ?>">
-    <a <?= /* @noEscape */ $block->getLinkAttributes() ?><?= /* @noEscape */ $dataPostParam ?>>
+    <a <?= /* @noEscape */
+    $block->getLinkAttributes() ?><?= /* @noEscape */
+    $dataPostParam ?>>
         <?= $block->escapeHtml($block->getLabel()) ?>
         <p class="authorization_link-text"><?= $block->escapeHtml(__('Sign In')) ?> Sign In</p>
     </a>

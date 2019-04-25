@@ -7,7 +7,7 @@
     </head>
     <body>
         <referenceContainer name="header.panel">
-            <container name="header_panel_more" htmlTag="div" htmlClass="header_panel--text" after="-" >
+            <container name="header_panel_more" htmlTag="div" htmlClass="header_panel--text" after="-">
                 <block class="Magento\Cms\Block\Block" name="header_panel">
                     <arguments>
                         <argument name="block_id" xsi:type="string">header_panel_block</argument>

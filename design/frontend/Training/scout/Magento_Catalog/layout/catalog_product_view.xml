@@ -47,34 +47,36 @@
 
 
         <referenceContainer name="content">
-        <container name="description.product" htmlTag="div" htmlClass="description_product" after="-">
-            <block class="Magento\Catalog\Block\Product\View" name="product.description"
-                   template="Magento_Catalog::product/view/descriptionProduct.phtml">
-            </block>
-            <container name="description.freeShipping" htmlTag="div" htmlClass="description_free__shipping">
-                <block class="Magento\Cms\Block\Block" name="free.shipping">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">cms_freeShipping_info</argument>
-                    </arguments>
+            <container name="description.product" htmlTag="div" htmlClass="description_product" after="-">
+                <block class="Magento\Catalog\Block\Product\View" name="product.description"
+                       template="Magento_Catalog::product/view/descriptionProduct.phtml">
                 </block>
+                <container name="description.freeShipping" htmlTag="div" htmlClass="description_free__shipping">
+                    <block class="Magento\Cms\Block\Block" name="free.shipping">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cms_freeShipping_info</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="description__block__wrapper" htmlTag="div" htmlClass="description_block_wrapper"
+                           after="-">
+                    <container name="description__block" htmlTag="div" htmlClass="description_block" after="-">
+                        <block class="Magento\Catalog\Block\Product\View\Description" name="custom.product.description"
+                               as="description" template="Magento_Catalog::product/view/attribute.phtml"
+                               group="detailed_info"
+                               after="product.description">
+                            <arguments>
+                                <argument name="text" xsi:type="string">Details</argument>
+                                <argument name="at_call" xsi:type="string">getDescription</argument>
+                                <argument name="at_code" xsi:type="string">description</argument>
+                                <argument name="css_class" xsi:type="string">description</argument>
+                                <argument name="at_label" xsi:type="string">none</argument>
+                                <argument name="title" translate="true" xsi:type="string">Details</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                </container>
             </container>
-            <container name="description__block__wrapper" htmlTag="div" htmlClass="description_block_wrapper" after="-">
-            <container name="description__block" htmlTag="div" htmlClass="description_block" after="-">
-            <block class="Magento\Catalog\Block\Product\View\Description" name="custom.product.description"
-                   as="description" template="Magento_Catalog::product/view/attribute.phtml" group="detailed_info"
-                   after="product.description">
-                <arguments>
-                    <argument name="text" xsi:type="string">Details</argument>
-                    <argument name="at_call" xsi:type="string">getDescription</argument>
-                    <argument name="at_code" xsi:type="string">description</argument>
-                    <argument name="css_class" xsi:type="string">description</argument>
-                    <argument name="at_label" xsi:type="string">none</argument>
-                    <argument name="title" translate="true" xsi:type="string">Details</argument>
-                </arguments>
-            </block>
-            </container>
-        </container>
-        </container>
         </referenceContainer>
 
 

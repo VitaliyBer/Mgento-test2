@@ -7,17 +7,21 @@
 // @codingStandardsIgnoreFile
 
 ?>
-<?php /* @var $block \Magento\Catalog\Block\Product\View\AbstractView */?>
+<?php /* @var $block \Magento\Catalog\Block\Product\View\AbstractView */ ?>
 <?php $_product = $block->getProduct() ?>
 
 <?php if ($block->displayProductStockStatus()): ?>
     <?php if ($_product->isAvailable()): ?>
-        <div class="stock available" title="<?= /* @escapeNotVerified */ __('Availability') ?>">
-            <span><?= /* @escapeNotVerified */ __('') ?></span>
+        <div class="stock available" title="<?= /* @escapeNotVerified */
+        __('Availability') ?>">
+            <span><?= /* @escapeNotVerified */
+                __('') ?></span>
         </div>
     <?php else: ?>
-        <div class="stock unavailable" title="<?= /* @escapeNotVerified */ __('Availability') ?>">
-            <span><?= /* @escapeNotVerified */ __('') ?></span>
+        <div class="stock unavailable" title="<?= /* @escapeNotVerified */
+        __('Availability') ?>">
+            <span><?= /* @escapeNotVerified */
+                __('') ?></span>
         </div>
     <?php endif; ?>
 <?php endif; ?>

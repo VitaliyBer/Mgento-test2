@@ -5,42 +5,49 @@
  * See COPYING.txt for license details.
  */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="footer">
-            <container name="footer_social" label="CMS Footer Social" htmlTag="div" htmlClass="footer_social" before="-"/>
-            <container name="footer_contact" label="CMS Footer Contact" htmlTag="div" htmlClass="footer_contact" before="footer_links"/>
+            <container name="footer_social" label="CMS Footer Social" htmlTag="div" htmlClass="footer_social"
+                       before="-"/>
+            <container name="footer_contact" label="CMS Footer Contact" htmlTag="div" htmlClass="footer_contact"
+                       before="footer_links"/>
             <container name="footer_links" label="CMS Footer Links" htmlTag="div" htmlClass="links" after="-"/>
-            <container name="footer_shipping" label="CMS Footer Shipping" htmlTag="div" htmlClass="footer_shipping" after="-"/>
-            <container name="footer_copyright-container" label="CMS Footer Copyright" htmlTag="div" htmlClass="footer_copyright" after="-"/>
+            <container name="footer_shipping" label="CMS Footer Shipping" htmlTag="div" htmlClass="footer_shipping"
+                       after="-"/>
+            <container name="footer_copyright-container" label="CMS Footer Copyright" htmlTag="div"
+                       htmlClass="footer_copyright" after="-"/>
         </referenceContainer>
 
         <move element="form.subscribe" destination="footer_social" after="footer_social"/>
 
         <referenceContainer name="footer_social">
-           <container name="footer_social_links"  label="CMS  Social Links" htmlTag="div" htmlClass="social_links" after="-">
-               <block class="Magento\Cms\Block\Block" name="cms_social">
-                   <arguments>
-                       <argument name="block_id" xsi:type="string">contact_social_block</argument>
-                   </arguments>
-               </block>
-           </container>
+            <container name="footer_social_links" label="CMS  Social Links" htmlTag="div" htmlClass="social_links"
+                       after="-">
+                <block class="Magento\Cms\Block\Block" name="cms_social">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">contact_social_block</argument>
+                    </arguments>
+                </block>
+            </container>
 
         </referenceContainer>
 
 
         <referenceContainer name="footer_contact">
-            <container name="footer_contacts"  label="CMS  Contacts Contact" htmlTag="div" htmlClass="contacts_items-block" before="footer_links">
-            <block class="Magento\Cms\Block\Block" name="cms_contacts" after="-">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">contact_contacts_block</argument>
-                </arguments>
-            </block>
+            <container name="footer_contacts" label="CMS  Contacts Contact" htmlTag="div"
+                       htmlClass="contacts_items-block" before="footer_links">
+                <block class="Magento\Cms\Block\Block" name="cms_contacts" after="-">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">contact_contacts_block</argument>
+                    </arguments>
+                </block>
             </container>
         </referenceContainer>
 
         <referenceContainer name="footer_links">
-            <container name="footer_links_link"  label="CMS  Links Link" htmlTag="div" htmlClass="links_item" after="-">
+            <container name="footer_links_link" label="CMS  Links Link" htmlTag="div" htmlClass="links_item" after="-">
                 <block class="Magento\Cms\Block\Block" name="cms_links" after="-">
                     <arguments>
                         <argument name="block_id" xsi:type="string">cms_links_block</argument>
@@ -55,7 +62,8 @@
         </referenceContainer>
 
         <referenceContainer name="footer_shipping">
-            <container name="footer_shipping-block"  label="CMS  Shipping Block" htmlTag="div" htmlClass="footer_shipping-items" after="-">
+            <container name="footer_shipping-block" label="CMS  Shipping Block" htmlTag="div"
+                       htmlClass="footer_shipping-items" after="-">
                 <block class="Magento\Cms\Block\Block" name="cms_shipping" after="-">
                     <arguments>
                         <argument name="block_id" xsi:type="string">cms_shipping_block</argument>
@@ -65,9 +73,9 @@
         </referenceContainer>
 
 
-
         <referenceContainer name="footer_copyright-container">
-            <container name="footer_copyright_block"  label="CMS  Copyright Block" htmlTag="div" htmlClass="footer_copyright-block" after="-">
+            <container name="footer_copyright_block" label="CMS  Copyright Block" htmlTag="div"
+                       htmlClass="footer_copyright-block" after="-">
                 <block class="Magento\Cms\Block\Block" name="cms_copyright" after="-">
                     <arguments>
                         <argument name="block_id" xsi:type="string">cms_copyright_block</argument>
@@ -75,8 +83,6 @@
                 </block>
             </container>
         </referenceContainer>
-
-
 
 
     </body>

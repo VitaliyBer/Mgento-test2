@@ -78,11 +78,12 @@ class LayoutProcessor
         \Magento\Checkout\Block\Checkout\LayoutProcessor $subject,
         array $jsLayout
     )
+
     {
 
 
         $billingAddressForm = $jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']['payment']['children']['afterMethods']['children']['billing-address-form'];
-        $jsLayout['components']['checkout']['children']['steps']['children']['my-new-step']['children']['billing-address-form'] = $billingAddressForm;
+        $jsLayout['components']['checkout']['children']['steps']['children']['my-new-step']['children']['custom-billing-address'] = $billingAddressForm;
         unset($jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']['payment']['children']['afterMethods']['children']['billing-address-form']);
 
 

@@ -4,14 +4,14 @@ define([
     "use strict";
     let mixin = {
 
-        getValue: function() {
+        getValue: function () {
 
             if (!this.isCalculated()) {
                 return this.notCalculatedMessage;
             }
 
             let shippingMethod = quote.shippingMethod();
-            let price =  shippingMethod.amount;
+            let price = shippingMethod.amount;
             return this.getFormattedPrice(price);
         }
     };

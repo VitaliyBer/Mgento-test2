@@ -11,44 +11,49 @@
 <?php $_product = $block->getProduct(); ?>
 <?php $buttonTitle = __('Add to Cart'); ?>
 <?php if ($_product->isSaleable()): ?>
-<div class="box-tocart">
-    <div class="fieldset">
-        <?php if ($block->shouldRenderQuantity()): ?>
-        <div class="field qty"  data-mage-init='{"qtyCart": {}}'>
-            <div class="cart__number cart__minus" id="qty"><a>-</a></div>
-            <div class="control">
+    <div class="box-tocart">
+        <div class="fieldset">
+            <?php if ($block->shouldRenderQuantity()): ?>
+                <div class="field qty" data-mage-init='{"qtyCart": {}}'>
+                    <div class="cart__number cart__minus" id="qty"><a>-</a></div>
+                    <div class="control">
 
-                <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Qty') ?></span></label>
-                <input type="number"
-                       name="qty"
-                       id="qty"
-                       value="<?= /* @escapeNotVerified */ $block->getProductDefaultQty() * 1 ?>"
-                       title="<?= /* @escapeNotVerified */ __('Qty') ?>"
-                       class="input-text qty"
-                       data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
-                       />
+                        <label class="label" for="qty"><span><?= /* @escapeNotVerified */
+                                __('Qty') ?></span></label>
+                        <input type="number"
+                               name="qty"
+                               id="qty"
+                               value="<?= /* @escapeNotVerified */
+                               $block->getProductDefaultQty() * 1 ?>"
+                               title="<?= /* @escapeNotVerified */
+                               __('Qty') ?>"
+                               class="input-text qty"
+                               data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
+                        />
+                    </div>
+                    <div class="cart__number cart__plus" id="qty"><a>+</a></div>
+                </div>
+            <?php endif; ?>
+
+            <div class="tocart__free-shipping">
+
+                <a href="#" class="tocart__shipping-link">free shipping </a>
+                <p class="tocart__shipping-text">ON ALL ORDERS OVER $50</p>
             </div>
-            <div class="cart__number cart__plus" id="qty"><a>+</a></div>
-        </div>
-        <?php endif; ?>
 
-        <div class="tocart__free-shipping">
-
-            <a href="#" class="tocart__shipping-link">free shipping </a>
-            <p class="tocart__shipping-text">ON ALL ORDERS OVER $50</p>
-        </div>
-
-        <div class="actions">
-            <button type="submit"
-                    title="<?= /* @escapeNotVerified */ $buttonTitle ?>"
-                    class="action primary tocart"
-                    id="product-addtocart-button">
-                <span><?= /* @escapeNotVerified */ $buttonTitle ?></span>
-            </button>
-            <?= $block->getChildHtml('', true) ?>
+            <div class="actions">
+                <button type="submit"
+                        title="<?= /* @escapeNotVerified */
+                        $buttonTitle ?>"
+                        class="action primary tocart"
+                        id="product-addtocart-button">
+                    <span><?= /* @escapeNotVerified */
+                        $buttonTitle ?></span>
+                </button>
+                <?= $block->getChildHtml('', true) ?>
+            </div>
         </div>
     </div>
-</div>
 <?php endif; ?>
 <script type="text/x-magento-init">
     {
@@ -56,4 +61,5 @@
             "Magento_Catalog/js/validate-product": {}
         }
     }
+
 </script>
